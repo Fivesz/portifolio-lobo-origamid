@@ -1,0 +1,36 @@
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+.cabecalho-container-flex {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+}
+.cabecalho-container-flex li a {
+  color: #141414;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 700px) {
+  .cabecalho {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .cabecalho-container-flex li a {
+    color: #141414;
+    text-decoration: none;
+    background-color: #f7f7f7;
+    padding: 10px;
+    display: block;
+  }
+}

@@ -1,0 +1,133 @@
+#formacao {
+  background-color: #141414;
+  color: #fff;
+}
+
+.formacao-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 20px;
+  gap: 100px;
+}
+.formacao-container--info {
+  display: grid;
+  gap: 50px;
+}
+
+.formacao-container .titulo-global {
+  color: #000;
+  max-width: 5ch;
+}
+
+.formacao-container .texto-global {
+  color: #a3a3a3;
+}
+
+.formacao-container .texto-global strong {
+  color: #fff;
+}
+
+.formacaoSuperior-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+}
+.formacaoSuperior {
+  background-color: #000;
+  padding: 20px;
+  border-radius: 5px;
+  display: grid;
+}
+.formacaoSuperior--grau {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: #a3a3a3;
+}
+.formacaoSuperior--titulo {
+  font-size: 1.125rem;
+  position: relative;
+}
+.formacaoSuperior--titulo::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(#b6f829, #67dd0a);
+  top: 0px;
+  left: -24px;
+}
+
+.formacaoSuperior--instituicao {
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  color: #a3a3a3;
+  align-self: end;
+}
+
+.cursosIdiomas {
+  display: grid;
+  gap: 30px;
+}
+.cursosIdiomas--titulo {
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #8f8f8f;
+  position: relative;
+}
+.cursosIdiomas--titulo::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url(/img/cursos.svg);
+  width: 24px;
+  height: 24px;
+  top: -5px;
+  left: -30px;
+}
+.cursosIdiomas-container--lista {
+  display: grid;
+  gap: 15px;
+}
+.cursos--lista {
+  display: flex;
+  justify-content: space-between;
+}
+.cursosIdiomas--extra {
+  color: #8f8f8f;
+}
+.idiomas--lista {
+  display: flex;
+  gap: 5px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 800px) {
+  .formacao-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 40px 20px;
+  }
+  .cursosIdiomas {
+    margin: 0px 30px;
+  }
+}
+@media (max-width: 550px) {
+  .formacaoSuperior-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .formacaoSuperior {
+    gap: 20px;
+  }
+  .formacaoSuperior--grau {
+    font-size: 0.75rem;
+  }
+  .formacaoSuperior--instituicao {
+    font-size: 1rem;
+  }
+}
